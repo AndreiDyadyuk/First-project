@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <div class="content">
+        {% for product in products %}
+            <div>
+               <a href="{% url 'product' product.id %}">
+                    <img class="item-image" src="{{ product.image.url }}" />
+                    <h3 class="color-disc">{{ product.title }}</h3>
+                </a>
+            </div>       
+        {% endfor %}
+    </div>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <div class="content">
+        {% if product %}
+            <div class="item">
+                <div>
+                    <img class="item-image" src="{{ product.image3.url }}" />
+                    <img class="item-image" src="{{ product.image1.url }}" />
+                    <img class="item-image" src="{{ product.image2.url }}" />
+                    <h3 class="color-disc">{{ product.description }}</h3>
+                    <h3 class="color-disc">{{ product.size }}</h3>
+                    <h3 class="color-disc">{{ product.circumference }}</h3>
+                    <h3 class="color-disc">{{ product.weight }}</h3>
+                    <h2 class="color-disc">Prices from {{ product.price }} $</h2>
+                </div>    
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}

@@ -1,0 +1,52 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="{% static 'app/css/style.css' %}">
+    <style>
+        .size-form {
+            width: 400px;
+            padding: 10px;
+            border:1px solid rgba(211, 207, 207, 0.842); 
+            border-radius:5px;
+            height: 25px;
+        }
+
+        .size-form-name {
+            width: 425px;
+            padding: 10px;
+            border:1px solid rgba(211, 207, 207, 0.842); 
+            border-radius:5px;
+            height: 25px;
+        }
+
+        .required {
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="intro">
+        <header>
+            <div class="header">
+                <div id="logo">AllBalls</div>
+                <nav id="nav">    
+                    <a class="nav-link" href="{% url 'products' %}">Main</a>
+                    <a class="nav-link" href="{% url 'all_com' %}">Comments</a>
+                    <a class="nav-link" href="{% url 'add_comment' %}">Leave a comment</a>
+                    <a class="nav-link" href="{% url 'contacts' %}">Contacts</a>
+                </nav>     
+            </div> 
+        </header>
+        <div>
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
+</body>
+</html>

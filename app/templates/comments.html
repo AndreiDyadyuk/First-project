@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <div class="page-comments">
+        <h3 id="color">We want to become better:</h3>
+        <h3 id="color">Your comments are important for us:</h3>
+        <div class="com-table">
+            {% for com in all_com %}
+                <h3 id="color">{{ com.name }}</h3>
+                <p id="color">{{ com.comment }}</p>
+                <h id="color">{{ com.issued }}</h5>
+            {% endfor %}
+        </div> 
+    </div>
+{% endblock %}

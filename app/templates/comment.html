@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <div class="content">
+        {% if com %}
+            <div><h3>{{ com.name }}</h3>
+                <h4>{{ com.comment }}</h4>
+                <h5>{{ com.issued }}</h5>
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}
